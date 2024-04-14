@@ -1,0 +1,24 @@
+Stwórz klasę biblioteki, która umożliwi użytkownikowi na zapis autora i listy książek, które napisał. Użytkownik powinien móc dodać autora, książki do autora. Książki powinny być sortowane przy użyciu liczby stron. Relacja między autorem a jego książkami to OneToMany.
+Klasy:
+
+Author
+name;
+age;
+favouriteGenre;
+List<Book> books
+
+Book
+	title;
+	genre;
+	numberOfPages;
+	author;
+
+LibraryDAO
+	getBooksOfAuthor(String authorName) {}
+	addBookToAuthor(String authorName, Book book) {}
+	getAllAuthors() {}
+	getAllBooks() {}
+	getAllBooksAndAuthors() {}
+	addAuthor(Author author) {}
+	deleteBook(String title) {}
+	deleteAuthor(String authorName) {}
