@@ -5,7 +5,7 @@ import org.hibernate.cfg.Configuration;
 
 public class AuthorSessionFactory {
 
-    public static SessionFactory getUserSessionFactory() {
+    public static SessionFactory getAuthorSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.configure("/hibernate.cfg.xml");
 

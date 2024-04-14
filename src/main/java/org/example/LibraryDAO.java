@@ -5,8 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class LibraryDAO {
-    private final SessionFactory sessionFactory = AuthorSessionFactory.getUserSessionFactory();
 
+    private final SessionFactory sessionFactory = AuthorSessionFactory.getAuthorSessionFactory();
 
     public void addAuthor(Author a) {
         Session session = sessionFactory.openSession();
@@ -16,9 +16,10 @@ public class LibraryDAO {
         session.close();
     }
 
+    public void addBookToAuthor(String authorName, Book book) {}
+
 //    public void getBooksOfAuthor(String authorName) {}
 //
-//    public void addBookToAuthor(String authorName, Book book) {}
 //
 //    public void getAllAuthors() {}
 //

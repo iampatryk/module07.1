@@ -10,6 +10,7 @@ public class Author {
 
     @Id
     @GeneratedValue
+    private long id;
     private String name;
     private Integer age;
     private String favouriteGenre;
@@ -18,11 +19,20 @@ public class Author {
 
     public Author() {}
 
-    public Author(String name, Integer age, String favouriteGenre, List<Book> books) {
+    public Author(long id, String name, Integer age, String favouriteGenre, List<Book> books) {
+        this.id = id;
         this.name = name;
         this.age = age;
         this.favouriteGenre = favouriteGenre;
         this.books = books;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -60,7 +70,8 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", favouriteGenre='" + favouriteGenre + '\'' +
                 ", books=" + books +

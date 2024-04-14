@@ -1,9 +1,6 @@
 package org.example;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Book {
@@ -13,8 +10,8 @@ public class Book {
 
     private String title;
     private String genre;
-    private Integer numberOfPages;
-    @OneToOne
+    private long numberOfPages;
+    @OneToMany
     private Author author;
 
     public String getTitle() {
@@ -33,11 +30,11 @@ public class Book {
         this.genre = genre;
     }
 
-    public Integer getNumberOfPages() {
+    public long getNumberOfPages() {
         return numberOfPages;
     }
 
-    public void setNumberOfPages(Integer numberOfPages) {
+    public void setNumberOfPages(long numberOfPages) {
         this.numberOfPages = numberOfPages;
     }
 
