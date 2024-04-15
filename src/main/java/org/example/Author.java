@@ -14,17 +14,17 @@ public class Author {
     private String name;
     private Integer age;
     private String favouriteGenre;
-    @OneToMany(mappedBy = "author")
-    private List<Book> books;
+//    @OneToMany(mappedBy = "author")
+//    private List<Book> books;
 
     public Author() {}
 
-    public Author(long id, String name, Integer age, String favouriteGenre, List<Book> books) {
+    public Author(long id, String name, Integer age, String favouriteGenre) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.favouriteGenre = favouriteGenre;
-        this.books = books;
+//        this.books = books;
     }
 
     public long getId() {
@@ -59,13 +59,13 @@ public class Author {
         this.favouriteGenre = favouriteGenre;
     }
 
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
+//    public List<Book> getBooks() {
+//        return books;
+//    }
+//
+//    public void setBooks(List<Book> books) {
+//        this.books = books;
+//    }
 
     @Override
     public String toString() {
@@ -74,7 +74,6 @@ public class Author {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", favouriteGenre='" + favouriteGenre + '\'' +
-                ", books=" + books +
                 '}';
     }
 }
