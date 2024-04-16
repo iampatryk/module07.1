@@ -1,0 +1,3 @@
+git pull  = download all branches
+git branch = show all branches
+git checkout + ,, name new branch ,, = load branch
